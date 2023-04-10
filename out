@@ -18,13 +18,13 @@ timestamp="$(jq -n "{version:{timestamp:\"$(date +%s)\"}}")"
 aws_access_key_id="$(jq -r '.source.aws_access_key_id' < "${payload}")"
 aws_secret_access_key="$(jq -r '.source.aws_secret_access_key' < "${payload}")"
 aws_region="$(jq -r '.source.aws_region' < "${payload}")"
-task_definition_json="$(jq -r '.source.task_definition.json' < "${payload}")"
+task_definition_json="$(jq '.source.task_definition.json' < "${payload}")"
 
 aws configure set aws_access_key_id $aws_access_key_id
 aws configure set aws_secret_access_key $aws_secret_access_key
 aws configure set default.region $aws_region
 
-aws ecs register-task-definition --cli-input-json $task_definition_json
+# aws ecs register-task-definition --cli-input-json $task_definition_json
 
 
 # disable="$(jq -r '.source.disable' < "${payload}")"
