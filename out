@@ -36,7 +36,7 @@ metadata="$(cat <<EOF
 EOF
 )"
 
-debug_info=="$(cat <<EOF
+debug_info="$(cat <<EOF
   {
     "metadata": [
       {"key": "hoge", "value": "hoge"},
