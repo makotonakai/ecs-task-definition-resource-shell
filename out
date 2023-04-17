@@ -25,7 +25,7 @@ _=$(aws configure set aws_secret_access_key $aws_secret_access_key)
 _=$(aws configure set default.region $aws_region)
 
 echo $task_definition_json > task_definition.json
-_=$(aws ecs register-task-definition --cli-input-json task_definition.json)
+_=$(aws ecs register-task-definition --cli-input-json fileb://task_definition.json)
 
 # disable="$(jq -r '.source.disable' < "${payload}")"
 # if [[ "$disable" == "true" ]]
