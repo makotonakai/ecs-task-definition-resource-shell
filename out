@@ -38,9 +38,8 @@ EOF
 
 debug_info="$(cat <<EOF
   {
-    "metadata": [
-      {"key": "hoge", "value": "hoge"}
-    ]
+    "key": "hoge", 
+    "value": "hoge"
   }
 EOF
 )"
