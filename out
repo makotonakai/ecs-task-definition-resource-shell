@@ -36,12 +36,6 @@ metadata="$(cat <<EOF
 EOF
 )"
 
-debug_info="$(cat <<EOF
-  {
-    "key": "hoge", 
-    "value": "hoge"
-  }
-EOF
-)"
+debug_info=""
 
 echo "$timestamp $metadata $debug_info " | jq -s add  >&3
