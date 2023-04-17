@@ -30,7 +30,7 @@ _=$(aws ecs register-task-definition --cli-input-json fileb://task_definition.js
 metadata="$(cat <<EOF
   {
     "metadata": [
-      {"key": "hoge", "value": "hoge"},
+      {"key": "hoge", "value": "hoge"}
     ]
   }
 EOF
@@ -39,7 +39,7 @@ EOF
 debug_info="$(cat <<EOF
   {
     "metadata": [
-      {"key": "hoge", "value": "hoge"},
+      {"key": "hoge", "value": "hoge"}
     ]
   }
 EOF
